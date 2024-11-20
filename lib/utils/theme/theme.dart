@@ -7,6 +7,7 @@ import 'package:loghaty/utils/theme/widget_themes/elevated_button_theme.dart';
 import 'package:loghaty/utils/theme/widget_themes/outlined_button_theme.dart';
 import 'package:loghaty/utils/theme/widget_themes/text_field_theme.dart';
 import 'package:loghaty/utils/theme/widget_themes/text_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/colors.dart';
 
@@ -15,13 +16,13 @@ class FAppTheme {
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: 'Poppins',
+    // fontFamily: ,
     disabledColor: FColors.grey,
     brightness: Brightness.light,
     primaryColor: FColors.primary,
-    textTheme: FTextTheme.lightTextTheme,
+    textTheme: GoogleFonts.changaTextTheme(FTextTheme.lightTextTheme),
     chipTheme: FChipTheme.lightChipTheme,
-    scaffoldBackgroundColor: FColors.white,
+    scaffoldBackgroundColor: FColors.primaryBackground,
     appBarTheme: FAppBarTheme.lightAppBarTheme,
     checkboxTheme: FCheckboxTheme.lightCheckboxTheme,
     bottomSheetTheme: FBottomSheetTheme.lightBottomSheetTheme,
