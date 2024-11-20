@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:loghaty/screens/courses/courses.dart';
 
+import 'screens/lessons/lessons.dart';
 import 'screens/levels/levels.dart';
 import 'utils/theme/theme.dart';
 
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: FAppTheme.lightTheme,
       darkTheme: FAppTheme.darkTheme,
-      home: const LevelsScreen(),
+      home: const LessonsScreen(),
     );
   }
 }

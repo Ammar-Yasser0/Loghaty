@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:loghaty/utils/constants/colors.dart';
+import 'package:loghaty/screens/courses/courses_list.dart';
+import 'package:loghaty/utils/constants/sizes.dart';
+
+import 'progress_section.dart';
 
 class CoursesScreen extends StatelessWidget {
   const CoursesScreen({super.key});
@@ -9,29 +11,30 @@ class CoursesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('المواد'),
+        title: const Text('المواد'),
         centerTitle: true,
       ),
-      body: GridView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 10),
-        itemCount: 4,
-        itemBuilder: (_, index) {
-          return Card(
-              color: FColors.highlightColor,
-              shape: CircleBorder(),
-              child: Center(
-                child: Text(
-                  'نحو',
-                  style: GoogleFonts.rakkas(
-                    fontSize:
-                        Theme.of(context).textTheme.displayLarge!.fontSize,
-                    color: Colors.white,
-                  ),
-                ),
-              ));
-        },
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const ProgressSectoin(),
+            const SizedBox(height: FSizes.spaceBtwSections),
+            const Expanded(
+              child: CoursesList(),
+            ),
+            const SizedBox(height: FSizes.spaceBtwSections),
+            SizedBox(
+              width: 2 * (MediaQuery.of(context).size.width / 3),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('اختبار تخطي المستوى'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

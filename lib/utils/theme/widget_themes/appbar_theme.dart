@@ -9,13 +9,16 @@ class FAppBarTheme {
     centerTitle: false,
     // scrolledUnderElevation: 0,
     backgroundColor: FColors.primary,
-    // color: FColors.white,
     iconTheme: IconThemeData(color: FColors.black, size: FSizes.iconMd),
     actionsIconTheme: IconThemeData(color: FColors.black, size: FSizes.iconMd),
     titleTextStyle: TextStyle(
-        fontSize: 18.0, fontWeight: FontWeight.w600, color: FColors.white),
+      fontSize: 18.0,
+      fontWeight: FontWeight.w600,
+      color: FColors.textWhite,
+    ),
+    
   );
-  
+
   static const darkAppBarTheme = AppBarTheme(
     elevation: 0,
     centerTitle: false,

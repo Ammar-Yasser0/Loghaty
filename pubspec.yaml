@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  easy_localization: ^3.0.7
-  google_fonts: ^6.2.1
+  easy_localization: ^3.0.7 # dealing with language and change the direction of my app
+  google_fonts: ^6.2.1 # Dealing with fonts and I'm going to remove it and download the fonts in my app
 
 
   # The following adds the Cupertino Icons font to your application.
