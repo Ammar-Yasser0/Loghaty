@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:loghaty/screens/courses/courses.dart';
 import 'package:loghaty/utils/constants/colors.dart';
 
 // This screen for let user see the levels of Arabic language.
@@ -10,7 +9,7 @@ class LessonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('دروس النحو'),
+        title: const Text('دروس النحو'),
         centerTitle: true,
       ),
       // Arabic Levels list
@@ -39,17 +38,17 @@ class LessonItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // If user chooses any evaliable level, this function will direct
-        // him to the courses screen for selected level
-        // TODO: Go to courses page
+        // If user chooses any lesson, this function will direct
+        // him to the show lesson screen
+        // TODO: Go to show lesson
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(builder: (context) => const CoursesScreen()),
         // );
       },
 
-      // If we locked the level, the color would be as a disabled color
-      // for the level card
+      // If we locked the lesson, the color would be as a disabled color
+      // for the lesson card
       child: Card(
         margin: const EdgeInsets.all(4),
         color: index != 0 ? FColors.grey : FColors.secondary,

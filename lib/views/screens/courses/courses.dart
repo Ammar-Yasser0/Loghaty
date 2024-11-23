@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loghaty/screens/courses/courses_list.dart';
+import 'package:loghaty/views/screens/courses/courses_list.dart';
 import 'package:loghaty/utils/constants/sizes.dart';
 
 import 'progress_section.dart';
@@ -15,22 +15,32 @@ class CoursesScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        padding: const EdgeInsets.symmetric(
+            horizontal: FSizes.sm, vertical: FSizes.md),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const ProgressSectoin(),
+            // Progress bar of the whole level courses
+            const LevelProgressSection(), // TODO: Change it's style
+
             const SizedBox(height: FSizes.spaceBtwSections),
-            const Expanded(
-              child: CoursesList(),
-            ),
+
+            // Courses grid view and I put it in expanded widget to ensure that
+            // it will take the rest of the column height
+            const Expanded(child: CoursesList()),
+
             const SizedBox(height: FSizes.spaceBtwSections),
+
+            // Pass the level button to jumb levels with a test
+            // TODO: Change the button design and separate it as a reusable widget
             SizedBox(
               width: 2 * (MediaQuery.of(context).size.width / 3),
               child: ElevatedButton(
-                onPressed: () {},
-                child: Text('اختبار تخطي المستوى'),
+                onPressed: () {
+                  // TODO: Direct the user to test page
+                },
+                child: const Text('اختبار تخطي المستوى'),
               ),
             ),
           ],

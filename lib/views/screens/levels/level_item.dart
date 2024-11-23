@@ -1,32 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:loghaty/screens/courses/courses.dart';
 import 'package:loghaty/utils/constants/colors.dart';
 
-// This screen for let user see the levels of Arabic language.
-class LevelsScreen extends StatelessWidget {
-  const LevelsScreen({super.key});
+import '../courses/courses.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('المستويات'),
-        centerTitle: true,
-      ),
-      // Arabic Levels list
-      body: ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-        itemCount: 4,
-        itemBuilder: (context, index) {
-          return LevelItem(
-            index: index,
-          );
-        },
-      ),
-    );
-  }
-}
 
+// Level item widget creates a card with a ListTile and it has an onTap
+// function to direct the user to courses page
 class LevelItem extends StatelessWidget {
   const LevelItem({
     super.key,
@@ -48,11 +27,12 @@ class LevelItem extends StatelessWidget {
         );
       },
 
-      // If we locked the level, the color would be as a disabled color
-      // for the level card
+      // If we locked the level, the color would be a disabled color
       child: Card(
         margin: const EdgeInsets.all(8),
-        color: index != 0 ? FColors.grey : FColors.secondary,
+        color: index != 0
+            ? FColors.grey
+            : FColors.secondary, // Change this condition
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
