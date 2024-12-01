@@ -39,3 +39,32 @@ class LinearProgressBar extends StatelessWidget {
     );
   }
 }
+
+class LinearProgressWithoutTitle extends StatelessWidget {
+  final double progress; // Value between 0 and 1
+
+  const LinearProgressWithoutTitle({super.key, required this.progress});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 5,
+      decoration: BoxDecoration(
+        color: Colors.grey[300], // Background color
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Stack(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            width: progress * MediaQuery.of(context).size.width, // Adjust width
+            decoration: BoxDecoration(
+              color: Colors.green, // Progress bar color
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -7,8 +7,9 @@ class FAppBarTheme {
 
   static const lightAppBarTheme = AppBarTheme(
     centerTitle: false,
-    // scrolledUnderElevation: 0,
+    scrolledUnderElevation: 20,
     backgroundColor: FColors.primary,
+    elevation: 20,
     iconTheme: IconThemeData(color: FColors.black, size: FSizes.iconMd),
     actionsIconTheme: IconThemeData(color: FColors.black, size: FSizes.iconMd),
     titleTextStyle: TextStyle(
@@ -16,7 +17,6 @@ class FAppBarTheme {
       fontWeight: FontWeight.w600,
       color: FColors.textWhite,
     ),
-    
   );
 
   static const darkAppBarTheme = AppBarTheme(

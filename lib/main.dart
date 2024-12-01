@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:loghaty/views/screens/courses/courses.dart';
 
+import 'views/screens/lesson_view/lesson_view.dart';
 import 'views/screens/lessons/lessons.dart';
 import 'views/screens/levels/levels.dart';
 import 'utils/theme/theme.dart';
+import 'views/screens/prize/prize.dart';
+import 'views/screens/quiz/quiz_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: FAppTheme.lightTheme,
       darkTheme: FAppTheme.darkTheme,
-      home: const LessonsScreen(),
+      home: const PrizeScreen(),
     );
   }
 }

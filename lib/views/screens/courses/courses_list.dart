@@ -12,7 +12,7 @@ class CoursesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: FColors.highlightColor,
+      color: FColors.primaryBackground,
       child: GridView.builder(
         padding: const EdgeInsets.symmetric(horizontal: FSizes.md, vertical: FSizes.lg),
         shrinkWrap: true,
