@@ -8,6 +8,7 @@ import 'views/screens/levels/levels.dart';
 import 'utils/theme/theme.dart';
 import 'views/screens/prize/prize.dart';
 import 'views/screens/quiz/quiz_screen.dart';
+import 'views/screens/quiz_levels/quiz_levels.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: FAppTheme.lightTheme,
       darkTheme: FAppTheme.darkTheme,
-      home: const PrizeScreen(),
+      home: const QuizLevels(),
     );
   }
 }
